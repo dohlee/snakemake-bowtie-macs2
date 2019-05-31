@@ -1,0 +1,3 @@
+name,library_layout,input,is_input
+K562_MLLT,single,K562_MLLT_input,False
+K562_MLLT_input,single,NA,True

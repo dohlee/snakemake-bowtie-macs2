@@ -1,0 +1,9 @@
+name: bowtie-macs2
+channels:
+    - bioconda
+dependencies:
+    - snakemake
+    - bowtie
+    - macs2
+    - samtools
+    - parallel-fastq-dump
