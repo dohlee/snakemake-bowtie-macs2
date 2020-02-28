@@ -1,0 +1,13 @@
+name: bowtie-macs2
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snakemake
+    - trim-galore
+    - fastqc
+    - multiqc
+    - bowtie
+    - parallel-fastq-dump
+    - macs2

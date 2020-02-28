@@ -1,0 +1,207 @@
+manifest: 'manifest.csv'
+relation: 'relation.csv'
+
+ascp_bin: '/data/home/dohoon/.aspera/connect/bin/ascp'
+ascp_key: '/data/home/dohoon/.aspera/connect/etc/asperaweb_id_dsa.openssh'
+
+reference:
+    name: 'hg38'
+    dir: '/data/project/dohoon/reference/hg38'
+    fasta: '/data/project/dohoon/reference/hg38/hg38.fa'
+
+data_dir: 'data'
+result_dir: 'result'
+bowtie_index_dir: '/data/project/dohoon/reference/hg38/bowitie_index'
+
+threads:
+    parallel_fastq_dump: 6
+    trim_galore: 6
+    bowtie_build: 6
+    bowtie: 8
+
+parallel_fastq_dump:
+    extra: '--tmpdir .'
+
+trim_galore:
+    extra: ''
+    quality: 20
+    phred33: True
+    phred64: False
+    fastqc: False
+    fastqc_args: False
+    adapter: False
+    adapter2: False
+    illumina: False
+    nextera: False
+    small_rna: False
+    max_length: False
+    stringency: 1
+    e: 0.1
+    length: 20
+    max_n: False
+    trim_n: False
+    no_report_file: False
+    suppress_warn: False
+    clip_R1: False
+    clip_R2: False
+    three_prime_clip_R1: False
+    three_prime_clip_R2: False
+    nextseq: False
+    basename: False
+    rrbs: False
+    non_directional: False
+    keep: False
+    trim1: False
+    retain_unpaired: False
+    length_1: False
+    length_2: False
+
+bowtie_build:
+    extra: ''
+    color: False
+    noauto: False
+    packed: False
+    bmax: False
+    bmaxdivn: False
+    dcv: False
+    nodc: False
+    noref: False
+    justref: False
+    offrate: 5
+    ftabchars: 10
+    ntoa: False
+    seed: 0
+    quiet: False
+
+bowtie:
+    extra: ''
+    seed: 0
+    skip: False
+    qupto: False
+    trim5: False
+    trim3: False
+    phred33_quals: True
+    phred64_quals: False
+    solexa_quals: False
+    solexa13_quals: False
+    integer_quals: False
+    large_index: False
+    v: False
+    seedmms: 2
+    maqerr: 70
+    seedlen: 28
+    nomaqround: False
+    minins: 0
+    maxins: 250
+    fr: True
+    rf: False
+    ff: False
+    nofw: False
+    norc: False
+    maxbts: False
+    pairtries: 100
+    tryhard: False
+    chunkmbs: 64
+    reads_per_batch: 16
+    k: 1
+    all: False
+    m: False
+    M: False
+    best: False
+    strata: False
+    time: False
+    offbase: 0
+    quiet: False
+    refidx: False
+    al: False
+    un: False
+    no_unal: False
+    max: False
+    suppress: False
+    fullref: False
+    snpphred: 30
+    snpfrac: False
+    col_cseq: False
+    col_cqual: False
+    col_keepends: False
+    sam: True
+    mapq: False
+    sam_nohead: False
+    sam_nosq: False
+    sam_rg: False
+    offrate: False
+    mm: False
+    shmem: False
+    mapq_cutoff: 10
+
+macs2_filterdup:
+    extra: ''
+    gsize: 'mm'
+    tsize: False
+    pvalue: '1e-5'
+    keep_dup: 1
+    verbose: 2
+
+macs2_callpeak_narrow:
+    extra: ''
+    gsize: 'mm'
+    keep_dup: 1
+    buffer_size: 100000
+    name: False
+    bdg: False
+    trackline: False
+    SPMR: False
+    tsize: False
+    bw: 300
+    mfold: '5 50'
+    fix_bimodal: False
+    nomodel: False
+    shift: 0
+    extsize: 200
+    pvalue: False
+    qvalue: 0.05
+    to_large: False
+    ratio: False
+    down_sample: False
+    seed: 0
+    tempdir: '.'
+    nolambda: False
+    slocal: 1000
+    llocal: 10000
+    broad: False
+    broad_cutoff: 0.1
+    cutoff_analysis: False
+    call_summits: False
+    fe_cutoff: 1.0
+
+macs2_callpeak_broad:
+    extra: ''
+    gsize: 'mm'
+    keep_dup: 1
+    buffer_size: 100000
+    name: False
+    bdg: False
+    trackline: False
+    SPMR: False
+    tsize: False
+    bw: 300
+    mfold: '5 50'
+    fix_bimodal: False
+    nomodel: False
+    shift: 0
+    extsize: 200
+    pvalue: False
+    qvalue: 0.05
+    to_large: False
+    ratio: False
+    down_sample: False
+    seed: 0
+    tempdir: '.'
+    nolambda: False
+    slocal: 1000
+    llocal: 10000
+    broad: True
+    broad_cutoff: 0.1
+    cutoff_analysis: False
+    call_summits: False
+    fe_cutoff: 1.0
