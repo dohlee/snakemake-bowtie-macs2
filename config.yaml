@@ -205,3 +205,8 @@ macs2_callpeak_broad:
     cutoff_analysis: False
     call_summits: False
     fe_cutoff: 1.0
+
+macs2_bdgcmp:
+    extra: ''
+    scaling_factor: 1.0
+    pseudocount: False
