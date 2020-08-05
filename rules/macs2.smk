@@ -226,7 +226,7 @@ checkpoint macs2_callpeak_broad:
     output:
         peak = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_peaks.broadPeak',
         excel = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_peaks.xls',
-        summits = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_summits.bed',
+        # summits = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_summits.bed',
         model_script = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_model.r',
         control_bdg = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_control_lambda.bdg',
         treat_bdg = RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_treat_pileup.bdg',
