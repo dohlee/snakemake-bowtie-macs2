@@ -36,6 +36,7 @@ include: 'rules/fastqc.smk'
 include: 'rules/bowtie.smk'
 include: 'rules/trim-galore.smk'
 include: 'rules/macs2.smk'
+include: 'rules/igvtools.smk'
 
 # Raw FASTQ files.
 RAW_FASTQ_SINGLE = expand(str(DATA_DIR / '{run}.fastq.gz'), run=single_runs)
@@ -54,7 +55,7 @@ NARROWPEAKS = expand(str(RESULT_DIR / '04_macs2_callpeak' / 'narrow' / '{name}_p
 BROADPEAKS = expand(str(RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_peaks.broadPeak'), zip, name=broad_names)
 
 # Bedgraph tracks.
-PVALUES = expand(str(RESULT_DIR / '05_macs2_bdgcmp' / '{name}_ppois.bdg'), name=narrow_names + broad_names)
+PVALUES = expand(str(RESULT_DIR / '05_macs2_bdgcmp' / '{name}_ppois.bdg.tdf'), name=narrow_names + broad_names)
 
 # Bowtie alignments.
 BAM = expand(str(RESULT_DIR / '02_bowtie' / '{run}.sorted.bam'), run=single_runs+paired_runs)

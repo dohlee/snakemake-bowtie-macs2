@@ -444,4 +444,3 @@ rule macs2_bdgcmp:
     log: 'logs/macs2_callpeak/{name}.log'
     wrapper:
         'http://dohlee-bio.info:9193/macs2/bdgcmp'
-

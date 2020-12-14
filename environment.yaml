@@ -11,3 +11,4 @@ dependencies:
     - bowtie
     - parallel-fastq-dump
     - macs2
+    - igvtools
