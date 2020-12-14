@@ -36,6 +36,7 @@ include: 'rules/fastqc.smk'
 include: 'rules/bowtie.smk'
 include: 'rules/trim-galore.smk'
 include: 'rules/macs2.smk'
+include: 'rules/sambamba.smk'
 include: 'rules/igvtools.smk'
 
 # Raw FASTQ files.
@@ -58,7 +59,7 @@ BROADPEAKS = expand(str(RESULT_DIR / '04_macs2_callpeak' / 'broad' / '{name}_pea
 PVALUES = expand(str(RESULT_DIR / '05_macs2_bdgcmp' / '{name}_ppois.bdg.tdf'), name=narrow_names + broad_names)
 
 # Bowtie alignments.
-BAM = expand(str(RESULT_DIR / '02_bowtie' / '{run}.sorted.bam'), run=single_runs+paired_runs)
+BAM = expand(str(RESULT_DIR / '02_bowtie' / '{run}.sorted.bam.bai'), run=single_runs+paired_runs)
 
 ALL = []
 ALL.append(RAW_FASTQ_SINGLE_QC)
