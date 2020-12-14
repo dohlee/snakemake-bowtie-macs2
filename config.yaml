@@ -136,7 +136,7 @@ bowtie:
 
 macs2_filterdup:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     tsize: False
     pvalue: '1e-5'
     keep_dup: 1
@@ -144,7 +144,7 @@ macs2_filterdup:
 
 macs2_callpeak_narrow:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     keep_dup: 1
     buffer_size: 100000
     name: False
@@ -176,7 +176,7 @@ macs2_callpeak_narrow:
 
 macs2_callpeak_broad:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     keep_dup: 1
     buffer_size: 100000
     name: False
